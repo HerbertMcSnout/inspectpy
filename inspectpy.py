@@ -30,7 +30,7 @@ def _eat_group(text, i):
     i_o = i
     groups = 1
     while groups:
-        if text[i] in [')', '[']:
+        if text[i] in [')', ']']:
             groups -= 1
         elif text[i] in ['(', '[']:
             groups += 1
