@@ -55,7 +55,7 @@ def _parse_apps(text, apps=None):
         elif text[i] == '(':
             args, i = _eat_group(text, i + 1)
             apps.append(_InspectApply_call(args))
-        elif text[i] == '[' and text[-1] == ']':
+        elif text[i] == '[':
             index, i = _eat_group(text, i + 1)
             apps.append(_InspectApply_index(index))
         elif text[i].isspace():
