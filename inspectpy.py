@@ -238,7 +238,7 @@ def _display_details(x):
     print(f'Type: {repr(type(x.obj))}')
     if hasattr(x.obj, '__text_signature__'):
         print('Args:', x.obj.__text_signature__ or '(...)')
-    if '__doc__' in dir(x.obj):
+    if '__doc__' in dir(x.obj) and x.obj.__doc__:
         print('\nDocumentation:')
         print('  ' + x.obj.__doc__.replace('\n', '\n  '))
 
